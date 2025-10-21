@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payment Flow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="payment-card">
+            <h1>Order Summary</h1>
+            
+            <div class="order-details">
+                <div class="item">
+                    <span class="item-name">Sample Product</span>
+                    <span class="item-price">₹1.00</span>
+                </div>
+                <div class="divider"></div>
+                <div class="total">
+                    <span class="total-label">Total Amount</span>
+                    <span class="total-amount">₹1.00</span>
+                </div>
+            </div>
+
+            <div class="payment-section">
+                <button id="payButton" class="pay-button">
+                    <img src="https://cdn-icons-png.flaticon.com/512/6124/6124998.png" alt="UPI" class="upi-icon">
+                    Pay via UPI
+                </button>
+                
+                <div id="paymentStatus" class="payment-status hidden">
+                    <div class="status-pending">
+                        <div class="spinner"></div>
+                        <p>Payment initiated... Please complete payment in your UPI app</p>
+                        <p class="order-id">Order ID: <span id="orderId"></span></p>
+                    </div>
+                </div>
+
+                <div id="paymentSuccess" class="payment-result success hidden">
+                    <div class="success-icon">✓</div>
+                    <h3>Payment Successful!</h3>
+                    <p>Your payment has been confirmed</p>
+                    <p class="transaction-id">Transaction ID: <span id="transactionId"></span></p>
+                </div>
+            </div>
+
+            <div class="sms-section">
+                <h3>SMS Confirmation (Optional)</h3>
+                <p>Enter your mobile number to receive payment confirmation via SMS:</p>
+                <input type="tel" id="mobileNumber" placeholder="Enter mobile number" maxlength="10">
+                <button id="enableSmsButton" class="sms-button">Enable SMS Confirmation</button>
+                
+                <div id="smsStatus" class="sms-status hidden">
+                    <p>SMS confirmation enabled for: <span id="confirmedNumber"></span></p>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h4>How it works:</h4>
+                <ol>
+                    <li>Click "Pay via UPI" to generate payment link</li>
+                    <li>Complete payment in your UPI app (GPay, PhonePe, etc.)</li>
+                    <li>Payment status will be updated automatically</li>
+                    <li>Optional: Enable SMS confirmation for instant updates</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

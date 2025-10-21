@@ -1,0 +1,221 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 500px;
+    width: 90%;
+    margin: 20px;
+}
+
+.payment-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.order-details {
+    margin-bottom: 30px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.item-name {
+    font-weight: 500;
+}
+
+.item-price {
+    color: #666;
+}
+
+.divider {
+    height: 2px;
+    background: #eee;
+    margin: 10px 0;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    padding: 15px 0;
+}
+
+.pay-button {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
+    transition: transform 0.2s;
+    width: 100%;
+    max-width: 300px;
+}
+
+.pay-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.upi-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.payment-status {
+    margin-top: 20px;
+}
+
+.status-pending {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4CAF50;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.payment-result {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.success {
+    background: #e8f5e8;
+    border: 1px solid #4CAF50;
+}
+
+.failed {
+    background: #ffebee;
+    border: 1px solid #f44336;
+}
+
+.success-icon, .failed-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.success-icon {
+    color: #4CAF50;
+}
+
+.failed-icon {
+    color: #f44336;
+}
+
+.sms-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+.sms-section h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.sms-section input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.sms-button {
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.sms-button:hover {
+    background: #1976D2;
+}
+
+.sms-status {
+    margin-top: 10px;
+    color: #4CAF50;
+    font-weight: 500;
+}
+
+.info-section {
+    margin-top: 30px;
+    text-align: left;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.info-section h4 {
+    margin-top: 0;
+    color: #333;
+}
+
+.info-section ol {
+    padding-left: 20px;
+}
+
+.info-section li {
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.hidden {
+    display: none;
+}
+
+.order-id, .transaction-id {
+    font-weight: bold;
+    color: #333;
+}
